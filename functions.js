@@ -1,5 +1,9 @@
 function capitalize(string) {
-  return string[0].toUpperCase() + Array.from(string).slice(1).join('');
+  return string[0].toUpperCase() + string.split('').slice(1).join('');
 }
 
-export { capitalize };
+function reverseString(string) {
+  return string.split('').reverse().join('');
+}
+
+export { capitalize, reverseString };
