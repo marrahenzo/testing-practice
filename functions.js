@@ -24,4 +24,16 @@ class Calculator {
   }
 }
 
-export { capitalize, reverseString, Calculator };
+function analyzeArray(arr) {
+  let sum = 0;
+  let min = arr[0];
+  let max = arr[0];
+  arr.forEach((item) => {
+    sum += item;
+    if (item < min) min = item;
+    if (item > max) max = item;
+  });
+  return { average: sum / arr.length, min, max, length: arr.length };
+}
+
+export { capitalize, reverseString, Calculator, analyzeArray };
