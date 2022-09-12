@@ -2,7 +2,8 @@ import {
   capitalize,
   reverseString,
   Calculator,
-  analyzeArray
+  analyzeArray,
+  caesarCipher
 } from './functions';
 
 test('take a string and return it with the first character capitalized', () => {
@@ -21,6 +22,10 @@ test('test calculator class functions', () => {
   expect(calculator.subtract(5, 1)).toBe(4);
   expect(calculator.divide(10, 2)).toBeCloseTo(5);
   expect(calculator.multiply(10, 5)).toBe(50);
+});
+
+test('take a string and return it with each character shifted', () => {
+  expect(caesarCipher('Shift this around!', 5)).toBe('Xmnky ymnx fwtzsi!');
 });
 
 test('take an array of numbers and return an object with the following properties: average, min, max, and length', () => {
